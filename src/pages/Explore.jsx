@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+ 
 
 function Explore() {
     const [activeTab, setActiveTab] = useState('Location');
@@ -29,7 +29,7 @@ function Explore() {
       />
     </div>
         </div>
-        <div className="flex overflow-x-auto whitespace-nowrap py-2 px-4 mt-8 crollbar-hide">
+        <div className="flex overflow-x-auto py-2 px-4  rounded-lg mt-5 scrollbar-hide">
       {tabs.map(tab => (
         <div
           key={tab}
