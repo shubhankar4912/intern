@@ -29,7 +29,7 @@ function Explore() {
       />
     </div>
         </div>
-        <div className="flex overflow-x-auto whitespace-nowrap py-2 px-4 bg-gray-50  mt-8">
+        <div className="flex overflow-x-auto whitespace-nowrap py-2 px-4 mt-8 crollbar-hide">
       {tabs.map(tab => (
         <div
           key={tab}
