@@ -33,7 +33,7 @@ function Detail() {
           alt="back" 
           onClick={() => navigate(-1)} // Navigate to the previous page
         />
-        <img className='relative h-[44px] w-[44px] -top-[63px] left-[251px]' src="./footer/heart.png" alt="heart" />
+        <img className='relative h-[54px] w-[54px] -top-[63px] left-[251px]' src="./footer/heart.png" alt="heart" />
       </div>
       <div className='flex justify-between mx-4 mt-4'>
         <p className='font-semibold text-2xl'>{title}</p>
