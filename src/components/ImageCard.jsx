@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function ImageCard({ imageUrl, title, rating, isFavorite }) {
+function ImageCard({ imageUrl, title, rating, isFavorite,detail }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/detail', { state: { imageUrl, title, rating, isFavorite,detail} });
+  };
   return (
-    <div className="relative w-[188px] h-[240px] overflow-hidden rounded-xl shadow-lg flex-shrink-0">
+    <div onClick={handleClick}  className=" relative w-[188px] h-[240px] overflow-hidden rounded-xl shadow-lg flex-shrink-0">
       <img 
         src={imageUrl} 
         alt={title} 

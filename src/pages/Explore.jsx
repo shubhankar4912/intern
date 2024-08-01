@@ -55,6 +55,7 @@ function Explore() {
             title={card.title}
             rating={card.rating}
             isFavorite={card.isFavorite}
+            detail={card.detail}
           />
         ))}
       </div>
