@@ -7,7 +7,7 @@ function Landing() {
        nav('/explore')
     }
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen w-full">
       <img 
         className="absolute z-10  left-[57px] top-[93px] md:left-[30px]" 
         src="./Aspen.png" 

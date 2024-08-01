@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Detail() {
   const location = useLocation();
-  const { imageUrl, title, rating, isFavorite, detail } = location.state;
+  const navigate = useNavigate();
+  const { imageUrl, title, rating, isFavorite, detail, price } = location.state;
   
   // State to manage the "Read More" functionality
   const [isReadMore, setIsReadMore] = useState(false);
@@ -23,9 +24,16 @@ function Detail() {
   const truncatedLength = 100; // Adjust this value based on your needs
 
   return (
-    <div>
-      <div className='mx-6 mt-4'>
-        <img className='w-[335px] h-[340px] rounded-3xl' src={imageUrl} alt="" />
+    <div className=' overflow-hidden'>
+      <div className=' relative mx-9 mt-4'>
+        <img className='relative z-[-1] w-[335px] h-[340px] rounded-3xl' src={imageUrl} alt="" />
+        <img 
+          className='relative top-[-331px] left-[23px] cursor-pointer' 
+          src="./footer/back.png" 
+          alt="back" 
+          onClick={() => navigate(-1)} // Navigate to the previous page
+        />
+        <img className='relative h-[44px] w-[44px] -top-[63px] left-[251px]' src="./footer/heart.png" alt="heart" />
       </div>
       <div className='flex justify-between mx-4 mt-4'>
         <p className='font-semibold text-2xl'>{title}</p>
@@ -48,13 +56,21 @@ function Detail() {
       </p>
       <p className='font-bold text-2xl ml-4 mt-2 '>Facilities</p>
 
-      <div className=' flex gap-2 mt-2 '>
+      <div className=' flex gap-2 mt-3 mx-6 '>
         <img src="./footer/Frame 1000000865.png" alt="" />
-      <img src="./footer/Frame 1000000866.png" alt="" />
-      <img src="./footer/Frame 1000000867.png" alt="" />
-      <img src="./footer/Frame 1000000868.png" alt="" />
+        <img src="./footer/Frame 1000000866.png" alt="" />
+        <img src="./footer/Frame 1000000867.png" alt="" />
+        <img src="./footer/Frame 1000000868.png" alt="" />
       </div>
-      
+      <div className=' mt-6 flex justify-between mx-6 '>
+        <div>
+          <p className='font-semibold text-lg'>Price</p>
+          <p className=' text-green-700 font-semibold text-lg '>{price}</p>
+        </div>
+        <div>
+          <button className="bg-blue-500 text-white rounded px-4 py-2">Book Now</button>
+        </div>
+      </div>
     </div>
   );
 }
