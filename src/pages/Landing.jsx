@@ -14,7 +14,7 @@ function Landing() {
         alt="Aspen" 
       />
       <img 
-        className="absolute z-[2] top-[500px] left-[50px] w-[260px] h-[146px]" 
+        className="absolute z-[2]  bottom-[173px] right-[87px]  w-[260px] h-[146px]" 
         src="./vacation.png" 
         alt="Vacation" 
       />
